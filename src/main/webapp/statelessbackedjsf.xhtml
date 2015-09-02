@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JBoss Property Converter</title>
+</head>
+
+<body>
+
+    <h1>Stateless Backed JSF page</h1>
+    <div id="container">
+        <h:form id="convertForm">
+            <h:panelGrid columns="2">
+                <h:outputLabel for="sourceProperty">Property:</h:outputLabel>
+                <h:inputText id="sourceProperty" value="#{converter.property}" />
+                <h:commandButton id="convert" value="Convert" action="#{converter.convert()}" />
+                <h:messages />
+            </h:panelGrid>
+        </h:form>
+        <h:form id="response">
+            <h:panelGrid columns="2">
+                <h:outputLabel for="property">Converts to:</h:outputLabel>
+                <h:outputLabel id="property" value="#{converter.convertedProperty}" />
+            </h:panelGrid>
+        </h:form>
+        <hr />
+    </div>
+
+</body>
+</html>
