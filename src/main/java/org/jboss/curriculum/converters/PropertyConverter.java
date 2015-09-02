@@ -1,20 +1,3 @@
-/**
- * A simple SLSB EJB. The EJB has a Local interface for the JSF Backing bean to use.
- *
- * We are using this EJB directly with a JSF via EL, to show this is now possible.
- * This removes the need for the traditional "backing-bean" between the JSF and the EJB,
- * less boiler plate code needed.
- *
- * While this is possible, the down-side is that "Action" methods ("convert" in this case)
- * should return a String for JSF navigation, and the bean logic may be different to a
- * straight Stateless bean that would otherwise be built as a reusable "Component".
- *
- * Careful design of your EJBs should mitigate this issue and ultimately reduce the code
- * needed in your applications.
- *
- * @author Bruce Wolfe May 2012.
- */
-
 package org.jboss.curriculum.converters;
 
 import java.io.Serializable;
